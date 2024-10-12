@@ -56,12 +56,12 @@ To use this package, you need to install the following dependencies:
    
 3. **Control the drone using keyboard inputs:**
 
-- **Press 'q'**: Quit the controller.
-- **w/s**: Increase/Decrease Pitch.
-- **a/d**: Increase/Decrease Roll.
-- **i/k**: Increase/Decrease Throttle.
-- **j/l**: Increase/Decrease Yaw.
-- **e**: Altitude Lock/Unlock.
-- **SpaceBar**: Arm/Disarm the drone.
+  - **Press 'q'**: Quit the controller.
+  - **w/s**: Increase/Decrease Pitch.
+  - **a/d**: Increase/Decrease Roll.
+  - **i/k**: Increase/Decrease Throttle.
+  - **j/l**: Increase/Decrease Yaw.
+  - **e**: Altitude Lock/Unlock.
+  - **SpaceBar**: Arm/Disarm the drone.
 
 
