@@ -37,7 +37,7 @@ To use this package, you need to install the following dependencies:
    cd ~/catkin_ws
    catkin_make
    source devel/setup.bash
-2. **Install the pygame library: You can install the `pygame` library using pip:
+2. **Install the pygame library: You can install the `pygame` library using pip:**
    ```bash
    pip install pygame
 ### Usage
