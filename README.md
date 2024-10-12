@@ -1,6 +1,6 @@
 # ROS Package to Control Pluto Drone
 
-This project provides a **ROS package** for controlling the **Pluto Drone**. It includes two Python nodes, `drone_command_publisher.py` and `drone_command_listener.py`, which communicate over the `drone_command` topic using the **PlutoMsg** message type from the [plutodrone ROS package](https://github.com/DronaAviation/pluto-ros-package/tree/master).
+This project provides a **ROS package** for controlling the **Pluto Drone** via Keyboard Controls. It includes two Python nodes, `drone_command_publisher.py` and `drone_command_listener.py`, which communicate over the `drone_command` topic using the **PlutoMsg** message type from the [plutodrone ROS package](https://github.com/DronaAviation/pluto-ros-package/tree/master).
 
 ## Project Overview
 
