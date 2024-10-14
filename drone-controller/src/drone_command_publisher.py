@@ -6,14 +6,21 @@ import os
 os.environ["SDL_AUDIODRIVER"] = "dummy"
 import pygame  # Import Pygame
 
+#variables
+delta = 50 #change in single keypress
+default = 1500 #reset value
+max_val = 1700 #upper limit for pitch/roll
+min_val = 1300 #lower limit for pitch/roll
+max_val_t = 2000 #upper limit for throttle/yaw
+min_val_t = 1000 #lower limit for throttle/yaw
 def arm_drone(command):
     command.rcYaw = 1500
     command.rcPitch = 1500
     command.rcRoll = 1500
     command.rcThrottle = 1000 #start at smallest throttle
-    command.rcAUX1 = 1000
-    command.rcAUX2 = 1000 # start without dev-mode
-    command.rcAUX3 = 1000 # start without alt-lock
+    command.rcAUX1 = 1500
+    command.rcAUX2 = 1500 # start without dev-mode
+    command.rcAUX3 = 1500 # start without alt-lock
     command.rcAUX4 = 1500
 
 def disarm_drone(command):
@@ -34,10 +41,7 @@ def main():
     command = PlutoMsg()
     disarm_drone(command)
     #variables
-    delta = 50 #change in single keypress
-    default = 1500 #reset value
-    max_val = 2000 #upper limit 
-    min_val = 1000 #lower limit
+    global delta , default ,max_val , min_val ,max_val_t , min_val_t
     armed = False #status of drone
     alt_lock = False #altitude lock of drone
 
@@ -108,14 +112,14 @@ def main():
             # if not keys[pygame.K_j] and not keys[pygame.K_l]:
             #     command.rcPitch = default
 
-            command.rcYaw = max(min_val,command.rcYaw)
-            command.rcYaw = min(max_val,command.rcYaw)
+            command.rcYaw = max(min_val_t,command.rcYaw)
+            command.rcYaw = min(max_val_t,command.rcYaw)
             command.rcPitch = max(min_val,command.rcPitch)
             command.rcPitch = min(max_val,command.rcPitch)
             command.rcRoll = max(min_val,command.rcRoll)
             command.rcRoll = min(max_val,command.rcRoll)
-            command.rcThrottle = max(min_val,command.rcThrottle)
-            command.rcThrottle = min(max_val,command.rcThrottle)
+            command.rcThrottle = max(min_val_t,command.rcThrottle)
+            command.rcThrottle = min(max_val_t,command.rcThrottle)
 
         if keys[pygame.K_q]:
             disarm_drone(command)
